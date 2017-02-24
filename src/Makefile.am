@@ -1,0 +1,2 @@
+bin_PROGRAMS = qnap_create_snapshot_from_volumeid
+qnap_create_snapshot_from_volumeid_SOURCES = qnap-create-snapshot-from-volumeid.c

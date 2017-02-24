@@ -1,0 +1,14 @@
+# qnap-create-snapshot-from-volumeid
+Command line C program to create a logical volume snapshot by providing a volume identifier
+
+To compile the QNap Create Snapshot from Volume ID Tool on the QNap device, please follow these coarse instructions:
+1. Install cross-project compiling tools from the QNap Development Kit (QDK), e.g. into /share/Public/
+2. Add the .../lib path(es) to /etc/ld.so.conf and call ldconfig
+3. Add the .../{,s}bin path(es) to the PATH environment variable
+4. Call the configure script of this package e.g. with
+   CPPFLAGS="-I/share/Public/opt/cross-project/x86/sys-root/usr/include" LDFLAGS="-L/lib -L/usr/lib" ./configure
+For the case 4 fails, add:
+3,5. "opkg install perl automake" and correct the references from /usr/bin/perl to /opt/bin/perl in /opt/bin/*auto*
+5. make install
+
+Feel free to extent this software to be a qpkg.
